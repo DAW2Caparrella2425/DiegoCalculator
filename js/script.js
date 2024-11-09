@@ -21,3 +21,9 @@ function posarComa() {
     refrescar();
 }
 
+function donarC() {
+    num1 = 0;
+    num2 = 0;
+    refrescar();
+}
+
