@@ -27,3 +27,11 @@ function donarC() {
     refrescar();
 }
 
+function operar(valor) {
+    if (num1 == 0) {
+        num1.parseFloat(document.getElementById("valor_num").value);
+    }
+    num2 = parseFloat(num1);
+    num1=0;
+    opera=valor;
+}
