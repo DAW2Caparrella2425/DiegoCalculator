@@ -11,3 +11,13 @@ function assignarNumero(numero) {
     refrescar();
 }
 
+function posarComa() {
+    if (num1.indexOf('.') == -1) {
+        num1 += '.';
+    } else if (num1==0) {
+        num1 = '0.';
+    }
+
+    refrescar();
+}
+
