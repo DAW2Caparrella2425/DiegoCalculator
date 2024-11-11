@@ -34,6 +34,7 @@ a {
 
 input[type="button"] {
     border: none;
+    border-radius: 3px;
     margin: 2px;
     width: 30px;
     font-size: 21px;
@@ -41,9 +42,10 @@ input[type="button"] {
 }
 
 input[type="button"]:hover {
-    background-color: rgb(227, 227, 227);
+    background-color: rgb(225, 224, 224);
 }
 
 input[type="text"] {
     width: 95%;
+    outline: none;
 }
