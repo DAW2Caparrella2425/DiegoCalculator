@@ -7,6 +7,10 @@ a {
     text-decoration: none;
 }
 
+h1 {
+    font-size: 20px;
+}
+
 .main {
     width: 190px;
     margin: 0 auto;
