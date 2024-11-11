@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Inici</title>
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A brief page description">
+    <meta name="keywords" content="html,cheatsheet" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="/normalised.css">
+    <link rel="stylesheet" href="../css/styles.css">
+<!-- Prepare for second course --> 
+    <script src="../js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+
+<!-- If we use bootstrap
+
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+ -->
+
+
+</head> 
+<body> 
+<!-- Content --> 
+
+ <div class="main">
+  <h2><a href="../index.html">Inici</a></h2>
+  <h1>Calculadora Científica</h1>
+  
+ 
+    <div class="calculadora">
+      
+          <input type="text" id="valor_num" maxlength="20" value="0" readonly="true">
+          
+          <input type="button" value="7" id="7" onclick="assignarNumero(7)">
+          
+          <input type="button" value="8" id="8" onclick="assignarNumero(8)">
+          
+          <input type="button" value="9" id="9" onclick="assignarNumero(9)">
+          
+          <input type="button" value="+" id="sumar" onclick="operar(1)">
+
+          <input type="button" value="√" id="arrel" onclick="calcularArrel()">
+          <br>
+          
+          <input type="button" value="4" id="4" onclick="assignarNumero(4)">
+          
+          <input type="button" value="5" id="5" onclick="assignarNumero(5)">
+          
+          <input type="button" value="6" id="6" onclick="assignarNumero(6)">
+          
+          <input type="button" value="-" id="restar" onclick="operar(2)">
+          
+          <input type="button" value="log" id="restar" onclick="calcularLog()">
+          <br>
+          
+          <input type="button" value="1" id="1" onclick="assignarNumero(1)">
+          
+          <input type="button" value="2" id="2" onclick="assignarNumero(2)">
+          
+          <input type="button" value="3" id="3" onclick="assignarNumero(3)">
+          
+          <input type="button" value="x" id="multiplicar" onclick="operar(3)">
+          <input type="button" value="sin" id="sin" onclick="calcularSinus()">
+          <br>
+          
+          <input type="button" value="0" id="0" onclick="assignarNumero(0)">
+          
+          <input type="button" value="," id="," onclick="donarComa()">
+          <input type="button" value="=" id="esIgual" onclick="esIgual()">
+          
+          <input type="button" value="/" id="dividir" onclick="operar(4)">
+          <input type="button" value="cos" id="cos" onclick="calcularQuocient()">
+          <input type="button" value="C" id="C" onclick="donarC()">
+          <input type="button" value="CE" id="CE" onclick="donarCE()">
+          
+  </div>
+  
+ </div>
+
+</body> 
+</html> 
