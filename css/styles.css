@@ -8,16 +8,22 @@ a {
 }
 
 .main {
-    width: 95%;
+    width: 190px;
+    margin: 0 auto;
     padding: 5px;
     background-color: rgb(249, 249, 249);
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .main h2 {
     background-color: rgb(234, 234, 234);
-    width: 55%;
+    width: 150px;
     padding: 10px;
     margin: 10px;
+    border-radius: 5px;
 }
 
 
