@@ -47,5 +47,6 @@ input[type="button"]:hover {
 
 input[type="text"] {
     width: 95%;
+    font-size: large;
     outline: none;
 }
