@@ -27,17 +27,21 @@ a {
 }
 
 .calculadora {
-    width:40%;
+    width: 300px;
+    margin: 0 auto;
     background-color: rgb(223, 223, 223);
     border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 input[type="button"] {
     border: none;
     border-radius: 3px;
-    margin: 2px;
-    width: 30px;
-    font-size: 21px;
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 26px;
     background-color: rgb(243, 243, 243);
 }
 
@@ -46,7 +50,8 @@ input[type="button"]:hover {
 }
 
 input[type="text"] {
-    width: 95%;
-    font-size: large;
+    width: 300px;
+    font-size: 25px;
     outline: none;
+    margin-bottom: 10px;
 }
