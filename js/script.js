@@ -1,7 +1,7 @@
 var num1 = "";
 var num2 = "";
 var opera = null;
-var expressio = "";
+var expresio = "";
 
 function assignarNumero(numero) {
     num1 += numero;
@@ -21,7 +21,7 @@ function donarC() {
     num1 = "";
     num2 = "";
     opera = null;
-    expressio = "";
+    expresio = "";
     refrescar();
     document.getElementById("valor_num").innerHTML = ""; 
 }
@@ -29,12 +29,10 @@ function donarC() {
 function operar(valor) {
     if (num1 === "") return;
 
-    
     num2 = num1;
     num1 = "";
     opera = valor;
 
-    
     let simbol = "";
     switch (valor) {
         case 1: simbol = "+"; break;
@@ -44,7 +42,7 @@ function operar(valor) {
         case 5: simbol = "^"; break;
     }
 
-    expressio = `${num2} ${simbol}`;
+    expresio = `${num2} ${simbol}`;
     mostrarOperacio();
 }
 
@@ -52,21 +50,20 @@ function esIgual() {
     if (num1 === "" || opera == null) return;
 
     const numeroActual = parseFloat(num1);
-    let resultado;
+    let resultat;
 
-    
     switch (opera) {
-        case 1: resultado = parseFloat(num2) + numeroActual; break;
-        case 2: resultado = parseFloat(num2) - numeroActual; break;
-        case 3: resultado = parseFloat(num2) * numeroActual; break;
-        case 4: resultado = parseFloat(num2) / numeroActual; break;
-        case 5: resultado = Math.pow(parseFloat(num2), numeroActual); break;
+        case 1: resultat = parseFloat(num2) + numeroActual; break;
+        case 2: resultat = parseFloat(num2) - numeroActual; break;
+        case 3: resultat = parseFloat(num2) * numeroActual; break;
+        case 4: resultat = parseFloat(num2) / numeroActual; break;
+        case 5: resultat = Math.pow(parseFloat(num2), numeroActual); break;
     }
 
-    num1 = resultado.toString();
+    num1 = resultat.toString();
     num2 = "";
     opera = null;
-    expressio = num1;
+    expresio = num1;
     refrescar();
     document.getElementById("valor_num").innerHTML = ""; 
 }
@@ -93,6 +90,42 @@ function mostrarOperacio() {
 
 function donarCE() {
     num1 = num1.slice(0, -1);
+    refrescar();
+    mostrarOperacio();
+}
+
+function calcularArrel() {
+    if (num1 === "") return;
+    let resultat = Math.sqrt(parseFloat(num1));
+    num1 = resultat.toString();
+    expresio = `√(${num1})`;
+    refrescar();
+    mostrarOperacio();
+}
+
+function calcularLog() {
+    if (num1 === "") return;
+    let resultat = Math.log(parseFloat(num1));
+    num1 = resultat.toString();
+    expresio = `ln(${num1})`;
+    refrescar();
+    mostrarOperacio();
+}
+
+function calcularSinus() {
+    if (num1 === "") return;
+    let resultat = Math.sin(parseFloat(num1));
+    num1 = resultat.toString();
+    expresio = `sin(${num1})`;
+    refrescar();
+    mostrarOperacio();
+}
+
+function calcularQuocient() {
+    if (num1 === "") return;
+    let resultat = Math.cos(parseFloat(num1));
+    num1 = resultat.toString();
+    expresio = `cos(${num1})`;
     refrescar();
     mostrarOperacio();
 }
