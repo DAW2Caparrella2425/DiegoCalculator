@@ -33,34 +33,75 @@
   <h2><a href="../index.html">Inici</a></h2>
   <h1>Calculadora Simple</h1>
   
-  <div class="calculadora">
-    <input type="text" id="valor_num" maxlength="20" value="0" readonly="true">
-    <br>
-    <input type="button" value="/" id="dividir" onclick="operar(4)">
-    <input type="button" value="X" id="multiplicar" onclick="operar(3)">
-    
-    <input type="button" value="7" id="7" onclick="assignarNumero(7)">
-    <input type="button" value="8" id="8" onclick="assignarNumero(8)">
-    <input type="button" value="9" id="9" onclick="assignarNumero(9)">
+ 
+    <table class="calculadora">
+      <tr>
+        <td colspan="4">
+          <input type="text" id="valor_num" maxlength="20" value="0" readonly="true">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="button" value="/" id="dividir" onclick="operar(4)">
+        </td>
+        <td>
+          <input type="button" value="X" id="multiplicar" onclick="operar(3)">
+        <td>
+        </tr>
+        <tr>
+          <td>
+            <input type="button" value="7" id="7" onclick="assignarNumero(7)">
+          <td>
+          <td>
+            <input type="button" value="8" id="8" onclick="assignarNumero(8)">
+          </td>
+          <td>
+            <input type="button" value="9" id="9" onclick="assignarNumero(9)">
+          </td>
+          <td>
+            <input type="button" value="-" id="restar" onclick="operar(2)">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="button" value="4" id="4" onclick="assignarNumero(4)">
+          </td>
+          <td>
+            <input type="button" value="5" id="5" onclick="assignarNumero(5)">
+          </td>
+          <td>
+            <input type="button" value="6" id="6" onclick="assignarNumero(6)">
+          </td>
+          <td>
+            <input type="button" value="+" id="sumar" onclick="operar(1)">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="button" value="1" id="1" onclick="assignarNumero(1)">
+          </td>
+          <td>
+            <input type="button" value="2" id="2" onclick="assignarNumero(2)">
+          </td>
+          <td>
+            <input type="button" value="3" id="3" onclick="assignarNumero(3)">
+          </td>
+          <td>
+            <input type="button" value="=" id="esIgual" onclick="esIgual()">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="button" value="0" id="0" onclick="assignarNumero(0)">
+          </td>
+          <td>
+            <input type="button" value="," id="," onclick="donarComa()">
+          </td>
+          <td>
+            <input type="button" value="C" id="C" onclick="donarC()">
+          </td>
+        </tr>
 
-    <input type="button" value="-" id="restar" onclick="operar(2)">
-
-    <input type="button" value="4" id="4" onclick="assignarNumero(4)">
-    <input type="button" value="5" id="5" onclick="assignarNumero(5)">
-    <input type="button" value="6" id="6" onclick="assignarNumero(6)">
-
-    <input type="button" value="+" id="sumar" onclick="operar(1)">
-
-    <input type="button" value="1" id="1" onclick="assignarNumero(1)">
-    <input type="button" value="2" id="2" onclick="assignarNumero(2)">
-    <input type="button" value="3" id="3" onclick="assignarNumero(3)">
-
-    <input type="button" value="=" id="esIgual" onclick="esIgual()">
-
-    <input type="button" value="0" id="0" onclick="assignarNumero(0)">
-    <input type="button" value="," id="," onclick="donarComa()">
-    <input type="button" value="C" id="C" onclick="donarC()">
-  </div>
   
  </div>
 
