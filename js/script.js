@@ -1,66 +1,79 @@
-var num1 = 0;
+var num1 = "";
 var num2 = 0;
 var opera;
 
 function assignarNumero(numero) {
-    if (num1==0 && num1!=='0.') {
-        num1 = numero;
-    } else {
-        num1 += numero;
-    }
-
+    num1 += numero;
     refrescar();
+    mostrarOperacio();
 }
 
 function posarComa() {
-    if (num1.indexOf('.') == -1) {
+    if (!num1.includes('.')) {
         num1 += '.';
-    } else if (num1==0) {
-        num1 = '0.';
     }
-
     refrescar();
+    mostrarOperacio();
 }
 
 function donarC() {
-    num1 = 0;
+    num1 = "";
     num2 = 0;
+    opera = null;
     refrescar();
+    document.getElementById("valor_num").innerHTML = ""; 
 }
 
 function operar(valor) {
-    if (num1 == 0) {
-        num1.parseFloat(document.getElementById("valor_num").value);
-    }
-    num2 = parseFloat(num1);
-    num1=0;
-    opera=valor;
+    if (num1 === "") return;
+
+    num2 = parseFloat(num1);  
+    num1 = "";  
+    opera = valor;
+
+    mostrarOperacio();
 }
 
 function esIgual() {
-    num1=parseFloat(num1);
-    switch(opera) {
-        case 1:
-            num1 += num2;
-            break;
-        case 2:
-            num1=num2-num1;
-            break;
-        case 3:
-            num1*=num2;
-            break;
-        case 4:
-            num1=num1/num2;
-            break;
-        case 5:
-            num1=Math.pow(num2, num1);
-            break;
+    if (num1 === "" || opera == null) return; 
+
+    let resultat;
+    const numeroActual = parseFloat(num1);
+
+    switch (opera) {
+        case 1: resultat = num2 + numeroActual; break;
+        case 2: resultat = num2 - numeroActual; break;
+        case 3: resultat = num2 * numeroActual; break;
+        case 4: resultat = num2 / numeroActual; break;
+        case 5: resultat = Math.pow(num2, numeroActual); break;
     }
+
+    num1 = resultat.toString();  
+    num2 = resultat;
+    opera = null;
     refrescar();
-    num2=parseFloat(num1);
-    num1=0;
+    document.getElementById("valor_num").innerHTML = ""; 
 }
 
 function refrescar() {
-    document.getElementById("valor_num").value=num1;
+    document.getElementById("valor_num").value = num1 || 0;  
+}
+
+function mostrarOperacio() {
+    let simbol = "";
+    switch (opera) {
+        case 1: simbol = "+"; break;
+        case 2: simbol = "-"; break;
+        case 3: simbol = "*"; break;
+        case 4: simbol = "/"; break;
+        case 5: simbol = "^"; break;
+    }
+
+    document.getElementById("valor_num").innerHTML = `${num2} ${simbol} ${num1}`;
+}
+
+function donarCE() {
+    num1 = num1.slice(0, -1);
+    refrescar();
+    mostrarOperacio();
 }
