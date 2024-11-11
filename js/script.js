@@ -35,3 +35,31 @@ function operar(valor) {
     num1=0;
     opera=valor;
 }
+
+function esIgual() {
+    num1=parseFloat(num1);
+    switch(opera) {
+        case 1:
+            num1 += num2;
+            break;
+        case 2:
+            num1=num2-num1;
+            break;
+        case 3:
+            num1*=num2;
+            break;
+        case 4:
+            num1=num1/=num2;
+            break;
+        case 5:
+            num1=Math.pow(num2, num1);
+            break;
+    }
+    refrescar();
+    num2=parseFloat(num1);
+    num1=0;
+}
+
+function refrescar() {
+    document.getElementById("valor_num").value=num1;
+}
